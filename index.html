@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Meetings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button id="btn1" class="time-slot open-button" onclick="openPopup('2pm',4)"><br>
+        <div>2pm</div>
+        <div id="2pm-slots">4 slots available</div>
+      </button>
+      <button id="btn1" class="time-slot open-button" onclick="openPopup('2.30pm',4)"><br>
+          <div>2.30pm</div>
+          <div id="2.30pm-slots">4 slots available</div>
+      </button>
+      <button id="btn1" class="time-slot open-button" onclick="openPopup('3pm',4)"><br>
+          <div>3pm</div>
+          <div id="3pm-slots">4 slots available</div>
+      </button>
+      <button id="btn1" class="time-slot open-button" onclick="openPopup('3.30pm',4)"><br>
+          <div>3.30pm</div>
+          <div id="3.30pm-slots">4 slots available</div>
+      </button>
+    
+    
+    <!-- Pop-up Form -->
+    <div id="popup-form" class="popup" hidden="true">
+        <form id="meeting-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <button type="button" onclick="submitMeeting()">Submit</button><br>
+            <button type="button" onclick="closePopup()">Cancel</button><br>
+        </form>
+    </div>
+
+    <!-- Scheduled Meetings Section -->
+    <div id="scheduled-meetings">
+        <h2>Scheduled Meetings:</h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
